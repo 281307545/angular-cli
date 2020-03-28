@@ -43,7 +43,7 @@ describe('@ngtools/webpack transformers', () => {
       const { program, compilerHost } = createTypescriptContext(input);
       const transformer = replaceServerBootstrap(
         () => true,
-        () => ({ path: '/project/src/app/app.module', className: 'AppModule' }),
+        () => ([{ path: '/project/src/app/app.module', className: 'AppModule' }]),
         () => program.getTypeChecker(),
       );
       const result = transformTypescript(undefined, [transformer], program, compilerHost);
@@ -88,7 +88,7 @@ describe('@ngtools/webpack transformers', () => {
       const { program, compilerHost } = createTypescriptContext(input);
       const transformer = replaceServerBootstrap(
         () => true,
-        () => ({ path: '/project/src/app/app.module', className: 'AppModule' }),
+        () => ([{ path: '/project/src/app/app.module', className: 'AppModule' }]),
         () => program.getTypeChecker(),
       );
       const result = transformTypescript(undefined, [transformer], program, compilerHost);
@@ -139,7 +139,7 @@ describe('@ngtools/webpack transformers', () => {
       const { program, compilerHost } = createTypescriptContext(input);
       const transformer = replaceServerBootstrap(
         () => true,
-        () => ({ path: '/project/src/app/app.module', className: 'AppModule' }),
+        () => ([{ path: '/project/src/app/app.module', className: 'AppModule' }]),
         () => program.getTypeChecker(),
       );
       const result = transformTypescript(undefined, [transformer], program, compilerHost);
@@ -178,7 +178,7 @@ describe('@ngtools/webpack transformers', () => {
       const { program, compilerHost } = createTypescriptContext(input);
       const transformer = replaceServerBootstrap(
         () => true,
-        () => ({ path: '/project/src/app/app.module', className: 'AppModule' }),
+        () => ([{ path: '/project/src/app/app.module', className: 'AppModule' }]),
         () => program.getTypeChecker(),
       );
       const result = transformTypescript(undefined, [transformer], program, compilerHost);
